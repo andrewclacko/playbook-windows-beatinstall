@@ -1,0 +1,25 @@
+---
+- hosts: localhost
+  become: yes
+  become_user: clacko
+  pre_tasks:
+    - name: downloading files to jenkins
+      get_url:
+        url: "{{ source }}/{{ beats }}/{{ beats }}-{{ version }}-x86_64.rpm"
+        dest: /tmp
+
+
+- hosts: windows
+  become: yes
+  roles:
+    - role-windows-beatinstall
+
+- hosts: localhost
+  become: yes
+  become_user: clacko
+  post_tasks:
+    - name: deleting downloaded files
+      file:
+        path: "/tmp/{{ beats }}-{{ version }}-x86_64.rpm"
+        state: absent
+
