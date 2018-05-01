@@ -1,6 +1,6 @@
 ---
-- hosts: localhost
-  become_user: clacko
+#- hosts: localhost
+#  become_user: clacko
 #  pre_tasks:
 #    - name: downloading files to jenkins
 #      get_url:
@@ -9,7 +9,6 @@
 
 
 - hosts: windows
-  become: yes
   roles:
     - role-windows-beatinstall
 
