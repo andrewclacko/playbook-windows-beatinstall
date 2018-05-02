@@ -7,9 +7,9 @@
         url: "{{ source }}/{{ beats }}/{{ beats }}-{{ version }}-windows-x86_64.zip"
         dest: /tmp
 
-#- hosts: windows
-#  roles:
-#    - role-windows-beatinstall
+- hosts: windows
+  roles:
+    - role-windows-beatinstall
 
 - hosts: localhost
   become_user: clacko
