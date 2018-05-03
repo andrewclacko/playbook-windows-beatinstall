@@ -24,7 +24,7 @@
 
 [windows:vars]
 ansible_user=clacko
-ansible_password=Lewisjosh2001!
+ansible_password=????????????
 ansible_connection=winrm
 ansible_port=5985
 ansible_winrm_cert_validation=ignore
@@ -37,7 +37,7 @@ ansible_sudo=yes
 [linux:vars]
 ansible_connection=ssh
 ansible_ssh_user=clacko
-ansible_ssh_pass=Lewisjosh2001!
+ansible_ssh_pass=????????????
 ansible_sudo=yes
 
 ## [webservers]
